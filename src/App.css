@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+table {
+  width: 50%;
+  margin: 20px auto;
+}
+
+/* 小さな画面向けのスタイル（例：スマートフォン） */
+@media (max-width: 600px) {
+  table {
+    width: 80%;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +47,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#product {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+input {
+  padding: 5px;
+  margin-left: 5px;
+}
+
+span {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }

@@ -20,69 +20,87 @@ function App() {
 
   return (
     <>
-      <table>
-        <tr>
-          <td>
-          </td>
-          <td>
-            数量
-          </td>
-          <td>
-            価格
-          </td>
-          <td>
-            単価
-          </td>
-        </tr>
-        <tr>
-          <td>
-            商品1
-          </td>
-          <td>
+      <div id="product">
+        <center>
+          Product1
+        </center>
+      </div>
+      <div>
+        <center>
+          <p>Volume :
             <input
               name="volume1"
-              type="number"
+              type="tel"
               value={inputs.volume1}
-              onChange={(e) => handleInputChange('volume1', e.target.value)}>
+              onChange={(e) => handleInputChange('volume1', e.target.value)}
+              autoComplete="off"  // autoComplete属性を追加
+            >
             </input>
-          </td>
-          <td>
+          </p>
+        </center>
+        <center>
+          <p>Price :
             <input
               name="price1"
-              type="number"
+              type="tel"
               value={inputs.price1}
-              onChange={(e) => handleInputChange('price1', e.target.value)}>
+              onChange={(e) => handleInputChange('price1', e.target.value)}
+              autoComplete="off"  // autoComplete属性を追加
+            >
             </input>
-          </td>
-          <td style={{ color: minUnitPrice === parseFloat(priceCalc(parseFloat(inputs.volume1), parseFloat(inputs.price1))) ? 'red' : 'black' }}>
-            {priceCalc(parseFloat(inputs.volume1), parseFloat(inputs.price1))}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            商品2
-          </td>
-          <td>
+          </p>
+        </center>
+        <center>
+          <p>Unit Price :
+            <span style={{ color: minUnitPrice === parseFloat(priceCalc(parseFloat(inputs.volume1), parseFloat(inputs.price1))) ? 'red' : 'black' }}>
+              {priceCalc(parseFloat(inputs.volume1), parseFloat(inputs.price1))}
+            </span>
+          </p>
+        </center>
+      </div>
+      <hr />
+      <div>
+        <center>
+          Product2
+        </center>
+      </div>
+      <div>
+        <center>
+          <p>Volume :
             <input
               name="volume2"
-              type="number"
+              type="tel"
               value={inputs.volume2}
-              onChange={(e) => handleInputChange('volume2', e.target.value)}>
+              onChange={(e) => handleInputChange('volume2', e.target.value)}
+              autoComplete="off"  // autoComplete属性を追加
+            >
             </input>
-          </td>
-          <td>
+          </p>
+        </center>
+        <center>
+          <p>Price :
             <input
               name="price2"
-              type="number"
+              type="tel"
               value={inputs.price2}
-              onChange={(e) => handleInputChange('price2', e.target.value)}>
+              onChange={(e) => handleInputChange('price2', e.target.value)}
+              autoComplete="off"  // autoComplete属性を追加
+            >
             </input>
-          </td>
-          <td style={{ color: minUnitPrice === parseFloat(priceCalc(parseFloat(inputs.volume2), parseFloat(inputs.price2))) ? 'red' : 'black' }}>
-            {priceCalc(parseFloat(inputs.volume2), parseFloat(inputs.price2))}
-          </td>
-        </tr>
-      </table >
+          </p>
+        </center>
+        <center>
+          <p>Unit Price :
+            <span style={{ color: minUnitPrice === parseFloat(priceCalc(parseFloat(inputs.volume2), parseFloat(inputs.price2))) ? 'red' : 'black' }}>
+              {priceCalc(parseFloat(inputs.volume2), parseFloat(inputs.price2))}
+            </span>
+          </p>
+        </center>
+      </div>
+      <hr />
+      <center>
+        <button>+</button>
+      </center>
     </>
   );
 }
